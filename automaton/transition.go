@@ -11,12 +11,12 @@ var transition = map[input]status{
 	{status: s2, input: "スコ"}: s3,
 	{status: s3, input: "スコ"}: s4,
 
-	{status: s4, input: "ドド"}: s5,
+	{status: s4, input: "ドド"}: s5, {status: s5, input: "スコ"}: s0,
 	{status: s5, input: "スコ"}: s6,
 	{status: s6, input: "スコ"}: s7,
 	{status: s7, input: "スコ"}: s8,
 
-	{status: s8, input: "ドド"}:  s9,
+	{status: s8, input: "ドド"}: s9, {status: s9, input: "スコ"}: s0,
 	{status: s9, input: "スコ"}:  s10,
 	{status: s10, input: "スコ"}: s11,
 	{status: s11, input: "スコ"}: s12,
