@@ -1,0 +1,19 @@
+digraph G {
+  s0 -> s1  [label="ドド"];  s0 -> s0  [label="スコ"];
+  s1 -> s2  [label="スコ"];  s1 -> s1  [label="ドド"];
+  s2 -> s3  [label="スコ"];  s2 -> s1  [label="ドド"];
+  s3 -> s4  [label="スコ"];  s3 -> s1  [label="ドド"];
+
+  s4 -> s5  [label="ドド"];  s4 -> s0  [label="スコ"];
+  s5 -> s6  [label="スコ"];  s5 -> s1  [label="ドド"];
+  s6 -> s7  [label="スコ"];  s6 -> s1  [label="ドド"];
+  s7 -> s8  [label="スコ"];  s7 -> s1  [label="ドド"];
+
+  s8 -> s9  [label="ドド"];  s8 -> s0  [label="スコ"];
+  s9 -> s10  [label="スコ"];  s9 -> s1  [label="ドド"];
+  s10 -> s11  [label="スコ"];  s10 -> s1  [label="ドド"];
+  s11 -> s12  [label="スコ"];  s11 -> s1  [label="ドド"];
+  
+  s0 [label="s0 (start)"];
+  s12 [shape=ellipse, peripheries=2];
+}
