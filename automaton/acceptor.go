@@ -14,6 +14,9 @@ func acceptor(ctx context.Context, ch <-chan string) bool {
 				return false
 			}
 			q = transition[input{status: q, input: v}]
+			//if q == start || q == s1 {
+			//	fmt.Println()
+			//}
 			fmt.Print(v)
 			if q == finite {
 				fmt.Println("ラブ注入♡")
