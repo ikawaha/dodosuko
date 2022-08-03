@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func gen(ctx context.Context, ch chan<- string) {
+func randomInput(ctx context.Context, ch chan<- string) {
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	v := []string{"ドド", "スコ"}
 	for {

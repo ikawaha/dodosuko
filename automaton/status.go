@@ -20,5 +20,5 @@ const (
 
 const (
 	start  = s0
-	finite = s12
+	accept = s12
 )

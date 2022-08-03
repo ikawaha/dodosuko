@@ -2,10 +2,11 @@ package automaton
 
 import (
 	"context"
+	"os"
 )
 
 func Run(ctx context.Context) bool {
 	ch := make(chan string, 1)
-	go gen(ctx, ch)
-	return acceptor(ctx, ch)
+	go randomInput(ctx, ch)
+	return acceptor(ctx, ch, os.Stdout)
 }

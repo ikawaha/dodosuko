@@ -1,11 +1,11 @@
 package automaton
 
-type input struct {
+type pair struct {
 	status status
 	input  string
 }
 
-var transition = map[input]status{
+var transition = map[pair]status{
 	{status: s0, input: "ドド"}: s1, {status: s0, input: "スコ"}: s0,
 	{status: s1, input: "スコ"}: s2,
 	{status: s2, input: "スコ"}: s3,

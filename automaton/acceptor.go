@@ -3,9 +3,12 @@ package automaton
 import (
 	"context"
 	"fmt"
+	"io"
 )
 
-func acceptor(ctx context.Context, ch <-chan string) bool {
+var debug bool //= true
+
+func acceptor(ctx context.Context, ch <-chan string, w io.Writer) bool {
 	q := start
 	for {
 		select {
@@ -13,13 +16,13 @@ func acceptor(ctx context.Context, ch <-chan string) bool {
 			if !ok {
 				return false
 			}
-			q = transition[input{status: q, input: v}]
-			//if q == start || q == s1 {
-			//	fmt.Println()
-			//}
-			fmt.Print(v)
-			if q == finite {
-				fmt.Println("ラブ注入♡")
+			q = transition[pair{status: q, input: v}]
+			if debug && (q == start || q == s1) {
+				fmt.Fprintln(w)
+			}
+			fmt.Fprint(w, v)
+			if q == accept {
+				fmt.Fprintln(w, "ラブ注入♡")
 				return true
 			}
 		case <-ctx.Done():
