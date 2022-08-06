@@ -1,9 +1,9 @@
 package automaton
 
-type status int
+type state int
 
 const (
-	s0 status = iota - 1
+	s0 state = iota - 1
 	s1
 	s2
 	s3

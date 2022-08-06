@@ -16,7 +16,7 @@ func acceptor(ctx context.Context, ch <-chan string, w io.Writer) bool {
 			if !ok {
 				return false
 			}
-			q = transition[pair{status: q, input: v}]
+			q = transition[pair{state: q, input: v}]
 			if debug && (q == start || q == s1) {
 				fmt.Fprintln(w)
 			}
