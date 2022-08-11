@@ -9,6 +9,7 @@
 
 ![image](https://user-images.githubusercontent.com/4232165/182422799-e5f10bb2-4397-42b7-a9f7-ac962c7ad74e.png)
 
+blog: https://zenn.dev/ikawaha/articles/20220806-55c9db03732a09
 
 ---
 MIT
